@@ -1,7 +1,6 @@
 package net.onvoid.copperized.common;
 
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
@@ -15,26 +14,10 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.onvoid.copperized.common.CopperizedArmorMaterials;
-import net.onvoid.copperized.common.CopperizedTiers;
 
 public class CopperizedItems {
 
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, net.onvoid.copperized.Copperized.MODID);
-
-    public static final RegistryObject<Item> ORANGE = ITEMS.register("orange", () ->
-            new Item((new Item.Properties())
-                    .tab(CreativeModeTab.TAB_FOOD)
-                    .food((new FoodProperties.Builder())
-                            .nutrition(4)
-                            .saturationMod(0.3F).build())));
-
-    public static final RegistryObject<Item> BANANA = ITEMS.register("banana", () ->
-            new Item((new Item.Properties())
-                    .tab(CreativeModeTab.TAB_FOOD)
-                    .food((new FoodProperties.Builder())
-                            .nutrition(4)
-                            .saturationMod(0.3F).build())));
 
     public static final RegistryObject<Item> COPPER_NUGGET = ITEMS.register("copper_nugget", () -> new Item((new Item.Properties()).tab(CreativeModeTab.TAB_MATERIALS)));
 
@@ -52,7 +35,7 @@ public class CopperizedItems {
 
     public static final RegistryObject<AxeItem> COPPER_AXE = ITEMS.register("copper_axe", () -> new AxeItem(CopperizedTiers.COPPER, 2.0F, -3.2F, (new Item.Properties()).tab(CreativeModeTab.TAB_TOOLS)));
 
-    public static final RegistryObject<HoeItem> COPPER_HOE = ITEMS.register("copper_hoe", () -> new HoeItem(CopperizedTiers.COPPER, -2, 0.0F, (new Item.Properties()).tab(CreativeModeTab.TAB_TOOLS)));
+    public static final RegistryObject<HoeItem> COPPER_HOE = ITEMS.register("copper_hoe", () -> new HoeItem(CopperizedTiers.COPPER, -1, 0.0F, (new Item.Properties()).tab(CreativeModeTab.TAB_TOOLS)));
 
     public static final RegistryObject<ShovelItem> COPPER_SHOVEL = ITEMS.register("copper_shovel", () -> new ShovelItem(CopperizedTiers.COPPER, -1.5F, -3.0F, (new Item.Properties()).tab(CreativeModeTab.TAB_TOOLS)));
 
