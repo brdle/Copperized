@@ -7,7 +7,7 @@
   ],
   "key": {
     "B": {
-      "item": "minecraft:copper_ingot"
+      "tag": "forge:ingots/copper"
     },
     "S": {
       "item": "minecraft:stick"

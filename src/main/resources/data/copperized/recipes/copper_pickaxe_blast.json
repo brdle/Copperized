@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "copperized:copper_pickaxe"
-  },
-  "result": "simplicity:copper_nugget",
-  "experience": 0.1,
-  "cookingtime": 100
-}

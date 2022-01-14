@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "BBB",
     "B B",
+    "BBB",
     "B B"
   ],
   "key": {
     "B": {
-      "item": "minecraft:copper_ingot"
+      "tag": "forge:ingots/copper"
     }
   },
   "result": {
-    "item": "copperized:copper_leggings"
+    "item": "copperized:copper_horse_armor"
   }
 }
