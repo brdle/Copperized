@@ -32,6 +32,7 @@ public class ClientProxy extends CommonProxy {
     @SubscribeEvent
     public void setupClient(FMLClientSetupEvent e){
         ItemBlockRenderTypes.setRenderLayer(CopperizedBlocks.COPPER_DOOR.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(CopperizedBlocks.COPPER_TRAPDOOR.get(), RenderType.cutout());
         return;
     }
 

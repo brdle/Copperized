@@ -2,6 +2,7 @@ package net.onvoid.copperized.common;
 
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -35,6 +36,8 @@ public class CopperizedItems {
     public static final RegistryObject<HorseArmorItem> COPPER_HORSE_ARMOR = ITEMS.register("copper_horse_armor", () -> new HorseArmorItem(3, "copper", (new Item.Properties()).stacksTo(1).tab(CreativeModeTab.TAB_MISC)));
 
     public static final RegistryObject<DoubleHighBlockItem> COPPER_DOOR = ITEMS.register("copper_door", () -> new DoubleHighBlockItem(CopperizedBlocks.COPPER_DOOR.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+
+    public static final RegistryObject<BlockItem> IRON_TRAPDOOR = ITEMS.register("copper_trapdoor", () -> new BlockItem(CopperizedBlocks.COPPER_TRAPDOOR.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
 
     public static void create(IEventBus bus) {
         ITEMS.register(bus);
