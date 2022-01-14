@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "simplicity:copper_horse_armor"
+    "item": "copperized:copper_horse_armor"
   },
   "result": "minecraft:copper_ingot",
   "experience": 0.1,

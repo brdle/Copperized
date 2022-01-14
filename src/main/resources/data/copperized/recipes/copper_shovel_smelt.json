@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "simplicity:copper_shovel"
+    "item": "copperized:copper_shovel"
   },
-  "result": "simplicity:copper_nugget",
+  "result": "copperized:copper_nugget",
   "experience": 0.1,
   "cookingtime": 200
 }

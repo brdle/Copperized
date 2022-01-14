@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "simplicity:copper_leggings"
+    "item": "copperized:copper_helmet"
   },
-  "result": "simplicity:copper_nugget",
+  "result": "copperized:copper_nugget",
   "experience": 0.1,
   "cookingtime": 100
 }
