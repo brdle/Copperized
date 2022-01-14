@@ -1,4 +1,4 @@
-package net.onvoid.simplicity.common;
+package net.onvoid.copperized.common;
 
 import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.world.item.Items;
