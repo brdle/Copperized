@@ -9,5 +9,7 @@
   "item.copperized.copper_axe": "Copper Axe",
   "item.copperized.copper_hoe": "Copper Hoe",
   "item.copperized.copper_shovel": "Copper Shovel",
-  "item.copperized.copper_horse_armor": "Copper Horse Armor"
+  "item.copperized.copper_horse_armor": "Copper Horse Armor",
+  "item.copperized.copper_door": "Copper Door",
+  "block.copperized.copper_door": "Copper Door"
 }

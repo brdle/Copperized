@@ -1,5 +1,7 @@
 package net.onvoid.copperized.proxy;
 
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
@@ -8,6 +10,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.onvoid.copperized.common.CopperizedBlocks;
 
 public class ClientProxy extends CommonProxy {
 
@@ -28,7 +31,7 @@ public class ClientProxy extends CommonProxy {
     @OnlyIn(Dist.CLIENT)
     @SubscribeEvent
     public void setupClient(FMLClientSetupEvent e){
-        //RenderTypeLookup.setRenderLayer(AdjunctBlocks.PIZZA_OVEN.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(CopperizedBlocks.COPPER_DOOR.get(), RenderType.cutout());
         return;
     }
 
