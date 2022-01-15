@@ -10,7 +10,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum CopperizedArmorMaterials implements ArmorMaterial {
-    COPPER("copper", 10, new int[] { 2, 3, 4, 2 }, 12, SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, 0.0F, () -> {
+    COPPER("copper", 14, new int[] { 1, 4, 5, 2 }, 9, SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, 0.0F, () -> {
         return Ingredient.of(Items.COPPER_INGOT);
     });
 

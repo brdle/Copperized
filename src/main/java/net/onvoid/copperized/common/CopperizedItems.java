@@ -23,17 +23,17 @@ public class CopperizedItems {
 
     public static final RegistryObject<ArmorItem> COPPER_BOOTS = ITEMS.register("copper_boots", () -> new ArmorItem(CopperizedArmorMaterials.COPPER, EquipmentSlot.FEET, (new Item.Properties()).tab(CreativeModeTab.TAB_COMBAT)));
 
-    public static final RegistryObject<SwordItem> COPPER_SWORD = ITEMS.register("copper_sword", () -> new SwordItem(CopperizedTiers.COPPER, 0, -2.4F, (new Item.Properties()).tab(CreativeModeTab.TAB_COMBAT)));
+    public static final RegistryObject<SwordItem> COPPER_SWORD = ITEMS.register("copper_sword", () -> new SwordItem(CopperizedTiers.COPPER, 3, -2.4F, (new Item.Properties()).tab(CreativeModeTab.TAB_COMBAT)));
 
-    public static final RegistryObject<PickaxeItem> COPPER_PICKAXE = ITEMS.register("copper_pickaxe", () -> new PickaxeItem(CopperizedTiers.COPPER, -2, -2.8F, (new Item.Properties()).tab(CreativeModeTab.TAB_TOOLS)));
+    public static final RegistryObject<PickaxeItem> COPPER_PICKAXE = ITEMS.register("copper_pickaxe", () -> new PickaxeItem(CopperizedTiers.COPPER, 1, -2.8F, (new Item.Properties()).tab(CreativeModeTab.TAB_TOOLS)));
 
-    public static final RegistryObject<AxeItem> COPPER_AXE = ITEMS.register("copper_axe", () -> new AxeItem(CopperizedTiers.COPPER, 2.0F, -3.2F, (new Item.Properties()).tab(CreativeModeTab.TAB_TOOLS)));
+    public static final RegistryObject<AxeItem> COPPER_AXE = ITEMS.register("copper_axe", () -> new AxeItem(CopperizedTiers.COPPER, 6.5F, -3.1F, (new Item.Properties()).tab(CreativeModeTab.TAB_TOOLS)));
 
-    public static final RegistryObject<HoeItem> COPPER_HOE = ITEMS.register("copper_hoe", () -> new HoeItem(CopperizedTiers.COPPER, 0, 0.5F, (new Item.Properties()).tab(CreativeModeTab.TAB_TOOLS)));
+    public static final RegistryObject<HoeItem> COPPER_HOE = ITEMS.register("copper_hoe", () -> new HoeItem(CopperizedTiers.COPPER_HOE, -2, -1.0F, (new Item.Properties()).tab(CreativeModeTab.TAB_TOOLS)));
 
-    public static final RegistryObject<ShovelItem> COPPER_SHOVEL = ITEMS.register("copper_shovel", () -> new ShovelItem(CopperizedTiers.COPPER, -1.5F, -3.0F, (new Item.Properties()).tab(CreativeModeTab.TAB_TOOLS)));
+    public static final RegistryObject<ShovelItem> COPPER_SHOVEL = ITEMS.register("copper_shovel", () -> new ShovelItem(CopperizedTiers.COPPER, 1.5F, -3.0F, (new Item.Properties()).tab(CreativeModeTab.TAB_TOOLS)));
 
-    public static final RegistryObject<HorseArmorItem> COPPER_HORSE_ARMOR = ITEMS.register("copper_horse_armor", () -> new HorseArmorItem(3, "copper", (new Item.Properties()).stacksTo(1).tab(CreativeModeTab.TAB_MISC)));
+    public static final RegistryObject<HorseArmorItem> COPPER_HORSE_ARMOR = ITEMS.register("copper_horse_armor", () -> new HorseArmorItem(4, "copper", (new Item.Properties()).stacksTo(1).tab(CreativeModeTab.TAB_MISC)));
 
     public static final RegistryObject<DoubleHighBlockItem> COPPER_DOOR = ITEMS.register("copper_door", () -> new DoubleHighBlockItem(CopperizedBlocks.COPPER_DOOR.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
 
