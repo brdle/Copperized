@@ -29,7 +29,7 @@ public class CopperizedItems {
 
     public static final RegistryObject<AxeItem> COPPER_AXE = ITEMS.register("copper_axe", () -> new AxeItem(CopperizedTiers.COPPER, 2.0F, -3.2F, (new Item.Properties()).tab(CreativeModeTab.TAB_TOOLS)));
 
-    public static final RegistryObject<HoeItem> COPPER_HOE = ITEMS.register("copper_hoe", () -> new HoeItem(CopperizedTiers.COPPER, -1, 0.0F, (new Item.Properties()).tab(CreativeModeTab.TAB_TOOLS)));
+    public static final RegistryObject<HoeItem> COPPER_HOE = ITEMS.register("copper_hoe", () -> new HoeItem(CopperizedTiers.COPPER, 0, 0.5F, (new Item.Properties()).tab(CreativeModeTab.TAB_TOOLS)));
 
     public static final RegistryObject<ShovelItem> COPPER_SHOVEL = ITEMS.register("copper_shovel", () -> new ShovelItem(CopperizedTiers.COPPER, -1.5F, -3.0F, (new Item.Properties()).tab(CreativeModeTab.TAB_TOOLS)));
 
