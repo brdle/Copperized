@@ -14,7 +14,7 @@ logoFile="copperized.png"
 logoBlur=false
 credits="onVoid"
 authors="onVoid"
-description="Completes copper as a worthy metal—with a full set of tools, armor, and a nugget."
+description="Completes copper as a worthy metal—with a full set of tools, armor, doors, and a nugget."
 itemIcon="copperized:copper_nugget"
 configBackground="minecraft:textures/block/stone.png"
 
