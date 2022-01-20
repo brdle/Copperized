@@ -25,7 +25,6 @@ public class ClientProxy extends CommonProxy {
         IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
         IEventBus forgeBus = MinecraftForge.EVENT_BUS;
         modBus.addListener(this::setupClient);
-        modBus.addListener(this::loadComplete);
     }
 
     @OnlyIn(Dist.CLIENT)
@@ -33,12 +32,6 @@ public class ClientProxy extends CommonProxy {
     public void setupClient(FMLClientSetupEvent e){
         ItemBlockRenderTypes.setRenderLayer(CopperizedBlocks.COPPER_DOOR.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(CopperizedBlocks.COPPER_TRAPDOOR.get(), RenderType.cutout());
-        return;
-    }
-
-    @OnlyIn(Dist.CLIENT)
-    @SubscribeEvent
-    public void loadComplete(FMLLoadCompleteEvent e){
-        return;
+        ItemBlockRenderTypes.setRenderLayer(CopperizedBlocks.COPPER_BARS.get(), RenderType.cutoutMipped());
     }
 }
