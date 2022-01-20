@@ -1,7 +1,7 @@
 modLoader="javafml"
 loaderVersion="[39,)"
 license="MIT License"
-issueTrackerURL="https://github.com/onVoid/CoppersDelight/issues"
+issueTrackerURL="https://github.com/onVoid/Copperized/issues"
 
 
 [[mods]]
@@ -16,7 +16,7 @@ credits="onVoid"
 authors="onVoid"
 description="Completes copper as a worthy metal—with a full set of tools, armor, doors, and a nugget."
 itemIcon="copperized:copper_nugget"
-configBackground="minecraft:textures/block/stone.png"
+configBackground="minecraft:textures/block/cut_copper.png"
 
 [[dependencies.coppersdelight]]
 modId="forge"
