@@ -59,7 +59,7 @@
     }
   ],
   "type": "copperized:enchanted_chance_item",
-  "item": "copperized:copper_shovel",
+  "item": "copperized:copper_pickaxe",
   "enchantment": "minecraft:unbreaking",
   "level": 3,
   "chance": 0.075,

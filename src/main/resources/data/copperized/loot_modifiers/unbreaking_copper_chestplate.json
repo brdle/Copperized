@@ -17,15 +17,7 @@
         },
         {
           "condition": "forge:loot_table_id",
-          "loot_table_id": "minecraft:chests/bastion_treasure"
-        },
-        {
-          "condition": "forge:loot_table_id",
           "loot_table_id": "minecraft:chests/desert_pyramid"
-        },
-        {
-          "condition": "forge:loot_table_id",
-          "loot_table_id": "minecraft:chests/end_city_treasure"
         },
         {
           "condition": "forge:loot_table_id",
@@ -34,10 +26,6 @@
         {
           "condition": "forge:loot_table_id",
           "loot_table_id": "minecraft:chests/pillager_outpost"
-        },
-        {
-          "condition": "forge:loot_table_id",
-          "loot_table_id": "minecraft:chests/nether_bridge"
         },
         {
           "condition": "forge:loot_table_id",
@@ -66,19 +54,14 @@
         {
           "condition": "forge:loot_table_id",
           "loot_table_id": "minecraft:chests/village/village_armorer"
-        },
-        {
-          "condition": "forge:loot_table_id",
-          "loot_table_id": "minecraft:chests/village/village_toolsmith"
-        },
-        {
-          "condition": "forge:loot_table_id",
-          "loot_table_id": "minecraft:chests/village/village_weaponsmith"
         }
       ]
     }
   ],
-  "type": "copperized:unbreaking_chance_item",
+  "type": "copperized:enchanted_chance_item",
   "item": "copperized:copper_chestplate",
-  "chance": 0.2
+  "enchantment": "minecraft:unbreaking",
+  "level": 2,
+  "chance": 0.075,
+  "unique": true
 }

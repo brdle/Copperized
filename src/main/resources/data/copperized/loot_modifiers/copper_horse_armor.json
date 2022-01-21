@@ -13,26 +13,18 @@
         },
         {
           "condition": "forge:loot_table_id",
-          "loot_table_id": "minecraft:chests/desert_pyramid"
+          "loot_table_id": "minecraft:chests/nether_bridge"
         },
         {
           "condition": "forge:loot_table_id",
           "loot_table_id": "minecraft:chests/ruined_portal"
-        },
-        {
-          "condition": "forge:loot_table_id",
-          "loot_table_id": "minecraft:chests/pillager_outpost"
-        },
-        {
-          "condition": "forge:loot_table_id",
-          "loot_table_id": "minecraft:chests/village/village_toolsmith"
         }
       ]
     }
   ],
   "type": "copperized:chance_item",
-  "item": "copperized:copper_pickaxe",
-  "chance": 0.15,
+  "item": "copperized:copper_horse_armor",
+  "chance": 0.1,
   "minAmount": 1,
   "maxAmount": 1,
   "unique": true

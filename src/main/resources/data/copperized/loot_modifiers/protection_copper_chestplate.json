@@ -53,15 +53,15 @@
         },
         {
           "condition": "forge:loot_table_id",
-          "loot_table_id": "minecraft:chests/village/village_toolsmith"
+          "loot_table_id": "minecraft:chests/village/village_armorer"
         }
       ]
     }
   ],
   "type": "copperized:enchanted_chance_item",
-  "item": "copperized:copper_shovel",
-  "enchantment": "minecraft:unbreaking",
-  "level": 3,
-  "chance": 0.075,
+  "item": "copperized:copper_chestplate",
+  "enchantment": "minecraft:protection",
+  "level": 1,
+  "chance": 0.05,
   "unique": true
 }

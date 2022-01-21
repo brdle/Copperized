@@ -53,13 +53,13 @@
         },
         {
           "condition": "forge:loot_table_id",
-          "loot_table_id": "minecraft:chests/village/village_toolsmith"
+          "loot_table_id": "minecraft:chests/village/village_weaponsmith"
         }
       ]
     }
   ],
   "type": "copperized:enchanted_chance_item",
-  "item": "copperized:copper_shovel",
+  "item": "copperized:copper_sword",
   "enchantment": "minecraft:unbreaking",
   "level": 3,
   "chance": 0.075,

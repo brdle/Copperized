@@ -9,6 +9,11 @@
     "copperized:copper_axe",
     "copperized:copper_sword",
     "copperized:unbreaking_copper_chestplate",
-    "copperized:unbreaking_copper_shovel"
+    "copperized:unbreaking_copper_leggings",
+    "copperized:unbreaking_copper_pickaxe",
+    "copperized:unbreaking_copper_sword",
+    "copperized:unbreaking_copper_shovel",
+    "copperized:protection_copper_chestplate",
+    "copperized:sharpness_copper_sword"
   ]
 }

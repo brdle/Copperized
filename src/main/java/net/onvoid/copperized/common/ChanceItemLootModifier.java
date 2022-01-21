@@ -19,21 +19,29 @@ public class ChanceItemLootModifier extends LootModifier {
     private final double chance;
     private final int minAmount;
     private final int maxAmount;
+    private final boolean unique;
 
-    public ChanceItemLootModifier(LootItemCondition[] conditions, Item item, double chance, int minAmount, int maxAmount) {
+    public ChanceItemLootModifier(LootItemCondition[] conditions, Item item, double chance, int minAmount, int maxAmount, boolean unique) {
         super(conditions);
         this.item = item;
         this.chance = chance;
         this.minAmount = minAmount;
         this.maxAmount = maxAmount;
+        this.unique = unique;
     }
 
     @Nonnull
     @Override
     public List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) {
+        if ((this.unique && generatedLoot.stream().anyMatch(stack -> stack.getItem().equals(this.item))) || (this.maxAmount < 1)) {
+            return generatedLoot;
+        }
         Random rand = new Random();
         if (rand.nextDouble(1.0) <= this.chance) {
             int amount = rand.nextInt(this.maxAmount + 1 - this.minAmount) + this.minAmount;
+            if (amount < 1) {
+                return generatedLoot;
+            }
             generatedLoot.add(new ItemStack(this.item, amount));
         }
         return generatedLoot;
@@ -47,7 +55,8 @@ public class ChanceItemLootModifier extends LootModifier {
             double chance = GsonHelper.getAsDouble(object, "chance");
             int minAmount = GsonHelper.getAsInt(object, "minAmount");
             int maxAmount = GsonHelper.getAsInt(object, "maxAmount");
-            return new ChanceItemLootModifier(conditions, item, chance, minAmount, maxAmount);
+            boolean unique = GsonHelper.getAsBoolean(object, "unique");
+            return new ChanceItemLootModifier(conditions, item, chance, minAmount, maxAmount, unique);
         }
 
         @Override
@@ -57,6 +66,7 @@ public class ChanceItemLootModifier extends LootModifier {
             json.addProperty("chance", instance.chance);
             json.addProperty("minAmount", instance.minAmount);
             json.addProperty("maxAmount", instance.maxAmount);
+            json.addProperty("unique", instance.unique);
             return json;
         }
     }
