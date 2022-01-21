@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "entries": [
+    "copperized:copper_ingot",
+    "copperized:copper_nugget",
+    "copperized:copper_chestplate",
+    "copperized:copper_helmet",
+    "copperized:copper_pickaxe",
+    "copperized:copper_axe",
+    "copperized:copper_sword",
+    "copperized:unbreaking_copper_chestplate",
+    "copperized:unbreaking_copper_shovel"
+  ]
+}

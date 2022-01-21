@@ -34,7 +34,7 @@ public class CopperizedBlocks {
         BLOCKS.register(bus);
     }
 
-    private static Boolean never(BlockState p_50779_, BlockGetter p_50780_, BlockPos p_50781_, EntityType<?> p_50782_) {
-        return (boolean)false;
+    private static Boolean never(BlockState state, BlockGetter getter, BlockPos pos, EntityType<?> type) {
+        return false;
     }
 }
