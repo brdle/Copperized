@@ -8,10 +8,10 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum CopperizedTiers implements Tier {
-    COPPER(2, 200, 5.0F, 1.5F, 14, () -> {
+    COPPER(2, 180, 5.0F, 1.5F, 14, () -> {
         return Ingredient.of(Items.COPPER_INGOT);
     }),
-    COPPER_HOE(2, 200, 5.0F, 2.0F, 14, () -> {
+    COPPER_HOE(2, 180, 5.0F, 2.0F, 14, () -> {
         return Ingredient.of(Items.COPPER_INGOT);
     });
 

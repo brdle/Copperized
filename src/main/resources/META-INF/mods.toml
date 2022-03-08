@@ -18,9 +18,9 @@ description="Completes copper as a worthy metal—with a full set of tools, armo
 itemIcon="copperized:copper_nugget"
 configBackground="minecraft:textures/block/cut_copper.png"
 
-[[dependencies.coppersdelight]]
-modId="forge"
-mandatory=true
-versionRange="[39,)"
-ordering="NONE"
-side="BOTH"
+[[dependencies.copperized]]
+    modId="forge"
+    mandatory=true
+    versionRange="[39,)"
+    ordering="NONE"
+    side="BOTH"

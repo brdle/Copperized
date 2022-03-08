@@ -2,13 +2,12 @@ package net.onvoid.copperized.proxy;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.onvoid.copperized.common.CopperizedBlocks;
+import net.onvoid.copperized.common.CopperizedEvents;
 import net.onvoid.copperized.common.CopperizedItems;
 import net.onvoid.copperized.common.CopperizedLootModifiers;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class CommonProxy {
 
     public void start() {
@@ -17,11 +16,6 @@ public class CommonProxy {
         CopperizedBlocks.create(modBus);
         CopperizedItems.create(modBus);
         CopperizedLootModifiers.create(modBus);
-        registerListeners();
+        forgeBus.register(new CopperizedEvents());
     }
-
-    public void registerListeners(){
-        return;
-    }
-
 }

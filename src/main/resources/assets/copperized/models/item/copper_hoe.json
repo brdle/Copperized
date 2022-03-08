@@ -2,5 +2,25 @@
     "parent": "item/handheld",
     "textures": {
         "layer0": "copperized:item/copper_hoe"
-    }
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "damage": 0.25
+            },
+            "model": "copperized:item/exposed_copper_hoe"
+        },
+        {
+            "predicate": {
+                "damage": 0.5
+            },
+            "model": "copperized:item/weathered_copper_hoe"
+        },
+        {
+            "predicate": {
+                "damage": 0.75
+            },
+            "model": "copperized:item/oxidized_copper_hoe"
+        }
+    ]
 }

@@ -48,15 +48,46 @@ public class CopperizedItems {
 
     public static final RegistryObject<DoubleHighBlockItem> COPPER_DOOR = ITEMS.register("copper_door", () ->
             new DoubleHighBlockItem(CopperizedBlocks.COPPER_DOOR.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<DoubleHighBlockItem> EXPOSED_COPPER_DOOR = ITEMS.register("exposed_copper_door", () ->
+            new DoubleHighBlockItem(CopperizedBlocks.EXPOSED_COPPER_DOOR.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<DoubleHighBlockItem> WEATHERED_COPPER_DOOR = ITEMS.register("weathered_copper_door", () ->
+            new DoubleHighBlockItem(CopperizedBlocks.WEATHERED_COPPER_DOOR.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<DoubleHighBlockItem> OXIDIZED_COPPER_DOOR = ITEMS.register("oxidized_copper_door", () ->
+            new DoubleHighBlockItem(CopperizedBlocks.OXIDIZED_COPPER_DOOR.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<DoubleHighBlockItem> WAXED_COPPER_DOOR = ITEMS.register("waxed_copper_door", () ->
+            new DoubleHighBlockItem(CopperizedBlocks.WAXED_COPPER_DOOR.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<DoubleHighBlockItem> WAXED_EXPOSED_COPPER_DOOR = ITEMS.register("waxed_exposed_copper_door", () ->
+            new DoubleHighBlockItem(CopperizedBlocks.WAXED_EXPOSED_COPPER_DOOR.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<DoubleHighBlockItem> WAXED_WEATHERED_COPPER_DOOR = ITEMS.register("waxed_weathered_copper_door", () ->
+            new DoubleHighBlockItem(CopperizedBlocks.WAXED_WEATHERED_COPPER_DOOR.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<DoubleHighBlockItem> WAXED_OXIDIZED_COPPER_DOOR = ITEMS.register("waxed_oxidized_copper_door", () ->
+            new DoubleHighBlockItem(CopperizedBlocks.WAXED_OXIDIZED_COPPER_DOOR.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
 
     public static final RegistryObject<BlockItem> COPPER_TRAPDOOR = ITEMS.register("copper_trapdoor", () ->
             new BlockItem(CopperizedBlocks.COPPER_TRAPDOOR.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> EXPOSED_COPPER_TRAPDOOR = ITEMS.register("exposed_copper_trapdoor", () ->
+            new BlockItem(CopperizedBlocks.EXPOSED_COPPER_TRAPDOOR.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> WEATHERED_COPPER_TRAPDOOR = ITEMS.register("weathered_copper_trapdoor", () ->
+            new BlockItem(CopperizedBlocks.WEATHERED_COPPER_TRAPDOOR.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> OXIDIZED_COPPER_TRAPDOOR = ITEMS.register("oxidized_copper_trapdoor", () ->
+            new BlockItem(CopperizedBlocks.OXIDIZED_COPPER_TRAPDOOR.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> WAXED_COPPER_TRAPDOOR = ITEMS.register("waxed_copper_trapdoor", () ->
+            new BlockItem(CopperizedBlocks.WAXED_COPPER_TRAPDOOR.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> WAXED_EXPOSED_COPPER_TRAPDOOR = ITEMS.register("waxed_exposed_copper_trapdoor", () ->
+            new BlockItem(CopperizedBlocks.WAXED_EXPOSED_COPPER_TRAPDOOR.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> WAXED_WEATHERED_COPPER_TRAPDOOR = ITEMS.register("waxed_weathered_copper_trapdoor", () ->
+            new BlockItem(CopperizedBlocks.WAXED_WEATHERED_COPPER_TRAPDOOR.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> WAXED_OXIDIZED_COPPER_TRAPDOOR = ITEMS.register("waxed_oxidized_copper_trapdoor", () ->
+            new BlockItem(CopperizedBlocks.WAXED_OXIDIZED_COPPER_TRAPDOOR.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
 
     public static final RegistryObject<BlockItem> MEDIUM_WEIGHTED_PRESSURE_PLATE = ITEMS.register("medium_weighted_pressure_plate", () ->
             new BlockItem(CopperizedBlocks.MEDIUM_WEIGHTED_PRESSURE_PLATE.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
 
     public static final RegistryObject<BlockItem> COPPER_BARS = ITEMS.register("copper_bars", () ->
             new BlockItem(CopperizedBlocks.COPPER_BARS.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_DECORATIONS)));
+
+    public static final RegistryObject<BlockItem> COPPER_BUTTON = ITEMS.register("copper_button", () ->
+            new BlockItem(CopperizedBlocks.COPPER_BUTTON.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
 
     public static void create(IEventBus bus) {
         ITEMS.register(bus);
