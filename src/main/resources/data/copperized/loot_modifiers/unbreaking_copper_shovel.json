@@ -62,6 +62,6 @@
   "item": "copperized:copper_shovel",
   "enchantment": "minecraft:unbreaking",
   "level": 3,
-  "chance": 0.075,
+  "chance": 0.045,
   "unique": true
 }

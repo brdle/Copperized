@@ -24,7 +24,7 @@
   ],
   "type": "copperized:chance_item",
   "item": "copperized:copper_nugget",
-  "chance": 0.3,
+  "chance": 0.2,
   "minAmount": 5,
   "maxAmount": 8,
   "unique": true

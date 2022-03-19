@@ -1,6 +1,13 @@
 {
   "replace": false,
   "values": [
-    "copperized:copper_door"
+    "copperized:copper_door",
+    "copperized:exposed_copper_door",
+    "copperized:weathered_copper_door",
+    "copperized:oxidized_copper_door",
+    "copperized:waxed_copper_door",
+    "copperized:waxed_exposed_copper_door",
+    "copperized:waxed_weathered_copper_door",
+    "copperized:waxed_oxidized_copper_door"
   ]
 }

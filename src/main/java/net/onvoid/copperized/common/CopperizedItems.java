@@ -2,7 +2,6 @@ package net.onvoid.copperized.common;
 
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -22,7 +21,7 @@ public class CopperizedItems {
     public static final RegistryObject<ArmorItem> COPPER_CHESTPLATE = ITEMS.register("copper_chestplate", () ->
             new ArmorItem(CopperizedArmorMaterials.COPPER, EquipmentSlot.CHEST, (new Item.Properties()).tab(CreativeModeTab.TAB_COMBAT)));
 
-    public static final RegistryObject<ArmorItem> COPPER_LEGGINGSS = ITEMS.register("copper_leggings", () ->
+    public static final RegistryObject<ArmorItem> COPPER_LEGGINGS = ITEMS.register("copper_leggings", () ->
             new ArmorItem(CopperizedArmorMaterials.COPPER, EquipmentSlot.LEGS, (new Item.Properties()).tab(CreativeModeTab.TAB_COMBAT)));
 
     public static final RegistryObject<ArmorItem> COPPER_BOOTS = ITEMS.register("copper_boots", () ->
@@ -97,11 +96,25 @@ public class CopperizedItems {
     public static final RegistryObject<BlockItem> WAXED_OXIDIZED_MEDIUM_WEIGHTED_PRESSURE_PLATE = ITEMS.register("waxed_oxidized_medium_weighted_pressure_plate", () ->
             new BlockItem(CopperizedBlocks.WAXED_OXIDIZED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
 
-    public static final RegistryObject<BlockItem> COPPER_BARS = ITEMS.register("copper_bars", () ->
-            new BlockItem(CopperizedBlocks.COPPER_BARS.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_DECORATIONS)));
-
     public static final RegistryObject<BlockItem> COPPER_BUTTON = ITEMS.register("copper_button", () ->
             new BlockItem(CopperizedBlocks.COPPER_BUTTON.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> EXPOSED_COPPER_BUTTON = ITEMS.register("exposed_copper_button", () ->
+            new BlockItem(CopperizedBlocks.EXPOSED_COPPER_BUTTON.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> WEATHERED_COPPER_BUTTON = ITEMS.register("weathered_copper_button", () ->
+            new BlockItem(CopperizedBlocks.WEATHERED_COPPER_BUTTON.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> OXIDIZED_COPPER_BUTTON = ITEMS.register("oxidized_copper_button", () ->
+            new BlockItem(CopperizedBlocks.OXIDIZED_COPPER_BUTTON.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> WAXED_COPPER_BUTTON = ITEMS.register("waxed_copper_button", () ->
+            new BlockItem(CopperizedBlocks.WAXED_COPPER_BUTTON.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> WAXED_EXPOSED_COPPER_BUTTON = ITEMS.register("waxed_exposed_copper_button", () ->
+            new BlockItem(CopperizedBlocks.WAXED_EXPOSED_COPPER_BUTTON.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> WAXED_WEATHERED_COPPER_BUTTON = ITEMS.register("waxed_weathered_copper_button", () ->
+            new BlockItem(CopperizedBlocks.WAXED_WEATHERED_COPPER_BUTTON.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> WAXED_OXIDIZED_COPPER_BUTTON = ITEMS.register("waxed_oxidized_copper_button", () ->
+            new BlockItem(CopperizedBlocks.WAXED_OXIDIZED_COPPER_BUTTON.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+
+    public static final RegistryObject<BlockItem> COPPER_BARS = ITEMS.register("copper_bars", () ->
+            new BlockItem(CopperizedBlocks.COPPER_BARS.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_DECORATIONS)));
 
     public static void create(IEventBus bus) {
         ITEMS.register(bus);

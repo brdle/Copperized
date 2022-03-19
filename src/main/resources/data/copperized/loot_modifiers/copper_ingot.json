@@ -32,8 +32,8 @@
   ],
   "type": "copperized:chance_item",
   "item": "minecraft:copper_ingot",
-  "chance": 0.3,
-  "minAmount": 4,
-  "maxAmount": 8,
+  "chance": 0.2,
+  "minAmount": 3,
+  "maxAmount": 7,
   "unique": true
 }

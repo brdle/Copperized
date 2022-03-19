@@ -32,7 +32,7 @@
   ],
   "type": "copperized:chance_item",
   "item": "copperized:copper_axe",
-  "chance": 0.15,
+  "chance": 0.10,
   "minAmount": 1,
   "maxAmount": 1,
   "unique": true

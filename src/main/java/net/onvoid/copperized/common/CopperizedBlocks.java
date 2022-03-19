@@ -88,9 +88,26 @@ public class CopperizedBlocks {
     public static final RegistryObject<WaxedWeightedPressurePlateBlock> WAXED_OXIDIZED_MEDIUM_WEIGHTED_PRESSURE_PLATE = BLOCKS.register("waxed_oxidized_medium_weighted_pressure_plate", () ->
             new WaxedWeightedPressurePlateBlock(BlockBehaviour.Properties.copy(OXIDIZED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get())));
 
-
-    public static final RegistryObject<StoneButtonBlock> COPPER_BUTTON = BLOCKS.register("copper_button", () ->
-            new StoneButtonBlock(BlockBehaviour.Properties.of(Material.DECORATION, MaterialColor.COLOR_ORANGE).noCollission().strength(0.75F)));
+    public static final RegistryObject<CopperButtonBlock> COPPER_BUTTON = BLOCKS.register("copper_button", () ->
+            new CopperButtonBlock(WeatheringCopper.WeatherState.UNAFFECTED,
+                    BlockBehaviour.Properties.of(Material.DECORATION, MaterialColor.COLOR_ORANGE).noCollission().strength(0.75F)));
+    public static final RegistryObject<CopperButtonBlock> EXPOSED_COPPER_BUTTON = BLOCKS.register("exposed_copper_button", () ->
+            new CopperButtonBlock(WeatheringCopper.WeatherState.EXPOSED,
+                    BlockBehaviour.Properties.of(Material.DECORATION, MaterialColor.COLOR_ORANGE).noCollission().strength(0.75F)));
+    public static final RegistryObject<CopperButtonBlock> WEATHERED_COPPER_BUTTON = BLOCKS.register("weathered_copper_button", () ->
+            new CopperButtonBlock(WeatheringCopper.WeatherState.WEATHERED,
+                    BlockBehaviour.Properties.of(Material.DECORATION, MaterialColor.COLOR_ORANGE).noCollission().strength(0.75F)));
+    public static final RegistryObject<CopperButtonBlock> OXIDIZED_COPPER_BUTTON = BLOCKS.register("oxidized_copper_button", () ->
+            new CopperButtonBlock(WeatheringCopper.WeatherState.OXIDIZED,
+                    BlockBehaviour.Properties.of(Material.DECORATION, MaterialColor.COLOR_ORANGE).noCollission().strength(0.75F)));
+    public static final RegistryObject<WaxedCopperButtonBlock> WAXED_COPPER_BUTTON = BLOCKS.register("waxed_copper_button", () ->
+            new WaxedCopperButtonBlock(BlockBehaviour.Properties.copy(COPPER_BUTTON.get())));
+    public static final RegistryObject<WaxedCopperButtonBlock> WAXED_EXPOSED_COPPER_BUTTON = BLOCKS.register("waxed_exposed_copper_button", () ->
+            new WaxedCopperButtonBlock(BlockBehaviour.Properties.copy(EXPOSED_COPPER_BUTTON.get())));
+    public static final RegistryObject<WaxedCopperButtonBlock> WAXED_WEATHERED_COPPER_BUTTON = BLOCKS.register("waxed_weathered_copper_button", () ->
+            new WaxedCopperButtonBlock(BlockBehaviour.Properties.copy(WEATHERED_COPPER_BUTTON.get())));
+    public static final RegistryObject<WaxedCopperButtonBlock> WAXED_OXIDIZED_COPPER_BUTTON = BLOCKS.register("waxed_oxidized_copper_button", () ->
+            new WaxedCopperButtonBlock(BlockBehaviour.Properties.copy(OXIDIZED_COPPER_BUTTON.get())));
 
     public static void create(IEventBus bus) {
         BLOCKS.register(bus);

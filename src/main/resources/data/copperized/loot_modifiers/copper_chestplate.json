@@ -24,7 +24,7 @@
   ],
   "type": "copperized:chance_item",
   "item": "copperized:copper_chestplate",
-  "chance": 0.15,
+  "chance": 0.10,
   "minAmount": 1,
   "maxAmount": 1,
   "unique": true

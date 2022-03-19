@@ -19,6 +19,9 @@ public class CopperMaps {
             .put(CopperizedBlocks.MEDIUM_WEIGHTED_PRESSURE_PLATE.get(), CopperizedBlocks.EXPOSED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get())
             .put(CopperizedBlocks.EXPOSED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get(), CopperizedBlocks.WEATHERED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get())
             .put(CopperizedBlocks.WEATHERED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get(), CopperizedBlocks.OXIDIZED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get())
+            .put(CopperizedBlocks.COPPER_BUTTON.get(), CopperizedBlocks.EXPOSED_COPPER_BUTTON.get())
+            .put(CopperizedBlocks.EXPOSED_COPPER_BUTTON.get(), CopperizedBlocks.WEATHERED_COPPER_BUTTON.get())
+            .put(CopperizedBlocks.WEATHERED_COPPER_BUTTON.get(), CopperizedBlocks.OXIDIZED_COPPER_BUTTON.get())
             .build());
     public static final Supplier<BiMap<Block, Block>> PREVIOUS_BY_BLOCK = Suppliers.memoize(() -> NEXT_BY_BLOCK.get().inverse());
 
@@ -35,6 +38,9 @@ public class CopperMaps {
             .put(CopperizedBlocks.EXPOSED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get(), CopperizedBlocks.WAXED_EXPOSED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get())
             .put(CopperizedBlocks.WEATHERED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get(), CopperizedBlocks.WAXED_WEATHERED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get())
             .put(CopperizedBlocks.OXIDIZED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get(), CopperizedBlocks.WAXED_OXIDIZED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get())
+            .put(CopperizedBlocks.EXPOSED_COPPER_BUTTON.get(), CopperizedBlocks.WAXED_EXPOSED_COPPER_BUTTON.get())
+            .put(CopperizedBlocks.WEATHERED_COPPER_BUTTON.get(), CopperizedBlocks.WAXED_WEATHERED_COPPER_BUTTON.get())
+            .put(CopperizedBlocks.OXIDIZED_COPPER_BUTTON.get(), CopperizedBlocks.WAXED_OXIDIZED_COPPER_BUTTON.get())
             .build());
     public static final Supplier<BiMap<Block, Block>> WAX_OFF_BY_BLOCK = Suppliers.memoize(() -> WAXABLES.get().inverse());
 

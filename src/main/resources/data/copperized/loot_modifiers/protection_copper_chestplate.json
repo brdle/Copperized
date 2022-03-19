@@ -62,6 +62,6 @@
   "item": "copperized:copper_chestplate",
   "enchantment": "minecraft:protection",
   "level": 1,
-  "chance": 0.05,
+  "chance": 0.025,
   "unique": true
 }
