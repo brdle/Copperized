@@ -7,7 +7,7 @@ import net.onvoid.copperized.proxy.ClientProxy;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod("copperized")
+@Mod(Copperized.MODID)
 public class Copperized {
     public static final String MODID = "copperized";
     public static Copperized instance;

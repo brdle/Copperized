@@ -82,6 +82,20 @@ public class CopperizedItems {
 
     public static final RegistryObject<BlockItem> MEDIUM_WEIGHTED_PRESSURE_PLATE = ITEMS.register("medium_weighted_pressure_plate", () ->
             new BlockItem(CopperizedBlocks.MEDIUM_WEIGHTED_PRESSURE_PLATE.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> EXPOSED_MEDIUM_WEIGHTED_PRESSURE_PLATE = ITEMS.register("exposed_medium_weighted_pressure_plate", () ->
+            new BlockItem(CopperizedBlocks.EXPOSED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> WEATHERED_MEDIUM_WEIGHTED_PRESSURE_PLATE = ITEMS.register("weathered_medium_weighted_pressure_plate", () ->
+            new BlockItem(CopperizedBlocks.WEATHERED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> OXIDIZED_MEDIUM_WEIGHTED_PRESSURE_PLATE = ITEMS.register("oxidized_medium_weighted_pressure_plate", () ->
+            new BlockItem(CopperizedBlocks.OXIDIZED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> WAXED_MEDIUM_WEIGHTED_PRESSURE_PLATE = ITEMS.register("waxed_medium_weighted_pressure_plate", () ->
+            new BlockItem(CopperizedBlocks.WAXED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> WAXED_EXPOSED_MEDIUM_WEIGHTED_PRESSURE_PLATE = ITEMS.register("waxed_exposed_medium_weighted_pressure_plate", () ->
+            new BlockItem(CopperizedBlocks.WAXED_EXPOSED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> WAXED_WEATHERED_MEDIUM_WEIGHTED_PRESSURE_PLATE = ITEMS.register("waxed_weathered_medium_weighted_pressure_plate", () ->
+            new BlockItem(CopperizedBlocks.WAXED_WEATHERED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> WAXED_OXIDIZED_MEDIUM_WEIGHTED_PRESSURE_PLATE = ITEMS.register("waxed_oxidized_medium_weighted_pressure_plate", () ->
+            new BlockItem(CopperizedBlocks.WAXED_OXIDIZED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_REDSTONE)));
 
     public static final RegistryObject<BlockItem> COPPER_BARS = ITEMS.register("copper_bars", () ->
             new BlockItem(CopperizedBlocks.COPPER_BARS.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_DECORATIONS)));

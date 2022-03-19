@@ -68,7 +68,26 @@ public class CopperizedBlocks {
             new IronBarsBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(4.0F, 6.0F).sound(SoundType.METAL).noOcclusion()));
 
     public static final RegistryObject<WeightedPressurePlateBlock> MEDIUM_WEIGHTED_PRESSURE_PLATE = BLOCKS.register("medium_weighted_pressure_plate", () ->
-            new WeightedPressurePlateBlock(60, BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().noCollission().strength(0.5F).sound(SoundType.WOOD)));
+            new WeatheringCopperWeightedPressurePlateBlock(WeatheringCopper.WeatherState.UNAFFECTED,
+                    BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().noCollission().strength(0.5F).sound(SoundType.WOOD)));
+    public static final RegistryObject<WeightedPressurePlateBlock> EXPOSED_MEDIUM_WEIGHTED_PRESSURE_PLATE = BLOCKS.register("exposed_medium_weighted_pressure_plate", () ->
+            new WeatheringCopperWeightedPressurePlateBlock(WeatheringCopper.WeatherState.EXPOSED,
+                    BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().noCollission().strength(0.5F).sound(SoundType.WOOD)));
+    public static final RegistryObject<WeightedPressurePlateBlock> WEATHERED_MEDIUM_WEIGHTED_PRESSURE_PLATE = BLOCKS.register("weathered_medium_weighted_pressure_plate", () ->
+            new WeatheringCopperWeightedPressurePlateBlock(WeatheringCopper.WeatherState.WEATHERED,
+                    BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().noCollission().strength(0.5F).sound(SoundType.WOOD)));
+    public static final RegistryObject<WeightedPressurePlateBlock> OXIDIZED_MEDIUM_WEIGHTED_PRESSURE_PLATE = BLOCKS.register("oxidized_medium_weighted_pressure_plate", () ->
+            new WeatheringCopperWeightedPressurePlateBlock(WeatheringCopper.WeatherState.OXIDIZED,
+                    BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().noCollission().strength(0.5F).sound(SoundType.WOOD)));
+    public static final RegistryObject<WaxedWeightedPressurePlateBlock> WAXED_MEDIUM_WEIGHTED_PRESSURE_PLATE = BLOCKS.register("waxed_medium_weighted_pressure_plate", () ->
+            new WaxedWeightedPressurePlateBlock(BlockBehaviour.Properties.copy(MEDIUM_WEIGHTED_PRESSURE_PLATE.get())));
+    public static final RegistryObject<WaxedWeightedPressurePlateBlock> WAXED_EXPOSED_MEDIUM_WEIGHTED_PRESSURE_PLATE = BLOCKS.register("waxed_exposed_medium_weighted_pressure_plate", () ->
+            new WaxedWeightedPressurePlateBlock(BlockBehaviour.Properties.copy(EXPOSED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get())));
+    public static final RegistryObject<WaxedWeightedPressurePlateBlock> WAXED_WEATHERED_MEDIUM_WEIGHTED_PRESSURE_PLATE = BLOCKS.register("waxed_weathered_medium_weighted_pressure_plate", () ->
+            new WaxedWeightedPressurePlateBlock(BlockBehaviour.Properties.copy(WEATHERED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get())));
+    public static final RegistryObject<WaxedWeightedPressurePlateBlock> WAXED_OXIDIZED_MEDIUM_WEIGHTED_PRESSURE_PLATE = BLOCKS.register("waxed_oxidized_medium_weighted_pressure_plate", () ->
+            new WaxedWeightedPressurePlateBlock(BlockBehaviour.Properties.copy(OXIDIZED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get())));
+
 
     public static final RegistryObject<StoneButtonBlock> COPPER_BUTTON = BLOCKS.register("copper_button", () ->
             new StoneButtonBlock(BlockBehaviour.Properties.of(Material.DECORATION, MaterialColor.COLOR_ORANGE).noCollission().strength(0.75F)));

@@ -8,12 +8,8 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum CopperizedTiers implements Tier {
-    COPPER(2, 180, 5.0F, 1.5F, 14, () -> {
-        return Ingredient.of(Items.COPPER_INGOT);
-    }),
-    COPPER_HOE(2, 180, 5.0F, 2.0F, 14, () -> {
-        return Ingredient.of(Items.COPPER_INGOT);
-    });
+    COPPER(2, 180, 5.0F, 1.5F, 14, () -> Ingredient.of(Items.COPPER_INGOT)),
+    COPPER_HOE(2, 180, 5.0F, 2.0F, 14, () -> Ingredient.of(Items.COPPER_INGOT));
 
     private final int level;
     private final int uses;
@@ -22,7 +18,7 @@ public enum CopperizedTiers implements Tier {
     private final int enchantmentValue;
     private final LazyLoadedValue<Ingredient> repairIngredient;
 
-    private CopperizedTiers(int level, int uses, float speed, float damage, int enchantmentValue, Supplier<Ingredient> repairIngredient) {
+    CopperizedTiers(int level, int uses, float speed, float damage, int enchantmentValue, Supplier<Ingredient> repairIngredient) {
         this.level = level;
         this.uses = uses;
         this.speed = speed;
