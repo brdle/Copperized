@@ -1,0 +1,5 @@
+{
+    "compression_mode": "lossless",
+    "compression_level": 100,
+    "strip_tags": true
+}
