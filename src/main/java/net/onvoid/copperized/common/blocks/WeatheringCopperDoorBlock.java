@@ -1,4 +1,4 @@
-package net.onvoid.copperized.common;
+package net.onvoid.copperized.common.blocks;
 
 import java.util.Optional;
 import java.util.Random;
@@ -18,6 +18,8 @@ import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.common.ToolAction;
 import net.minecraftforge.common.ToolActions;
+import net.onvoid.copperized.common.CopperMaps;
+import net.onvoid.copperized.common.CopperizedWeathering;
 
 public class WeatheringCopperDoorBlock extends DoorBlock implements CopperizedWeathering {
     private final WeatheringCopper.WeatherState weatherState;
@@ -56,19 +58,19 @@ public class WeatheringCopperDoorBlock extends DoorBlock implements CopperizedWe
         var stack = player.getItemInHand(hand);
         if (stack.getItem() == Items.HONEYCOMB) {
             var block = CopperMaps.getWaxed(state.getBlock());
-            if (block.isPresent() && state.getBlock() instanceof DoorBlock) {
+            if (block.isPresent() && state.getBlock() instanceof WeatheringCopperDoorBlock) {
                 var below = pos.below();
                 var above = pos.above();
                 var belowState = world.getBlockState(below);
                 var aboveState = world.getBlockState(above);
-                if (world.isLoaded(above) && aboveState.getBlock() instanceof DoorBlock && aboveState.getValue(DoorBlock.HALF).equals(DoubleBlockHalf.UPPER)) {
+                if (world.isLoaded(above) && aboveState.getBlock() instanceof WeatheringCopperDoorBlock && aboveState.getValue(DoorBlock.HALF).equals(DoubleBlockHalf.UPPER)) {
                     world.setBlock(above, block.map(b -> b.withPropertiesOf(aboveState)).get(), 27);
                     world.setBlock(pos, block.map(b -> b.withPropertiesOf(state)).get(), 27);
                     world.levelEvent(player, 3003, pos, 0);
                     world.levelEvent(player, 3003, above, 0);
                     stack.shrink(1);
                     return InteractionResult.SUCCESS;
-                } else if (world.isLoaded(below) && belowState.getBlock() instanceof DoorBlock && belowState.getValue(DoorBlock.HALF).equals(DoubleBlockHalf.LOWER)) {
+                } else if (world.isLoaded(below) && belowState.getBlock() instanceof WeatheringCopperDoorBlock && belowState.getValue(DoorBlock.HALF).equals(DoubleBlockHalf.LOWER)) {
                     world.setBlock(pos, block.map(b -> b.withPropertiesOf(state)).get(), 27);
                     world.setBlock(below, block.map(b -> b.withPropertiesOf(belowState)).get(), 27);
                     world.levelEvent(player, 3003, pos, 0);
@@ -92,18 +94,18 @@ public class WeatheringCopperDoorBlock extends DoorBlock implements CopperizedWe
             return null;
         }
         var block = CopperMaps.getPrevious(state.getBlock());
-        if (block.isPresent() && state.getBlock() instanceof DoorBlock) {
+        if (block.isPresent() && state.getBlock() instanceof WeatheringCopperDoorBlock) {
             var below = pos.below();
             var above = pos.above();
             var belowState = world.getBlockState(below);
             var aboveState = world.getBlockState(above);
             var newState = block.map(b -> b.withPropertiesOf(state)).get();
-            if (world.isLoaded(above) && aboveState.getBlock() instanceof DoorBlock && aboveState.getValue(DoorBlock.HALF).equals(DoubleBlockHalf.UPPER)) {
+            if (world.isLoaded(above) && aboveState.getBlock() instanceof WeatheringCopperDoorBlock && aboveState.getValue(DoorBlock.HALF).equals(DoubleBlockHalf.UPPER)) {
                 world.setBlock(above, block.map(b -> b.withPropertiesOf(aboveState)).get(), 27);
                 world.levelEvent(player, 3005, above, 0);
                 stack.shrink(1);
                 return newState;
-            } else if (world.isLoaded(below) && belowState.getBlock() instanceof DoorBlock && belowState.getValue(DoorBlock.HALF).equals(DoubleBlockHalf.LOWER)) {
+            } else if (world.isLoaded(below) && belowState.getBlock() instanceof WeatheringCopperDoorBlock && belowState.getValue(DoorBlock.HALF).equals(DoubleBlockHalf.LOWER)) {
                 world.setBlock(below, block.map(b -> b.withPropertiesOf(belowState)).get(), 27);
                 world.levelEvent(player, 3005, below, 0);
                 stack.shrink(1);
@@ -153,10 +155,10 @@ public class WeatheringCopperDoorBlock extends DoorBlock implements CopperizedWe
                 var belowState = world.getBlockState(below);
                 var aboveState = world.getBlockState(above);
                 var newState = block.map(b -> b.withPropertiesOf(state)).get();
-                if (world.isLoaded(above) && aboveState.getBlock() instanceof DoorBlock && aboveState.getValue(DoorBlock.HALF).equals(DoubleBlockHalf.UPPER)) {
+                if (world.isLoaded(above) && aboveState.getBlock() instanceof WeatheringCopperDoorBlock && aboveState.getValue(DoorBlock.HALF).equals(DoubleBlockHalf.UPPER)) {
                     world.setBlock(above, block.map(b -> b.withPropertiesOf(aboveState)).get(), 27);
                     world.setBlock(pos, newState, 27);
-                } else if (world.isLoaded(below) && belowState.getBlock() instanceof DoorBlock && belowState.getValue(DoorBlock.HALF).equals(DoubleBlockHalf.LOWER)) {
+                } else if (world.isLoaded(below) && belowState.getBlock() instanceof WeatheringCopperDoorBlock && belowState.getValue(DoorBlock.HALF).equals(DoubleBlockHalf.LOWER)) {
                     world.setBlock(below, block.map(b -> b.withPropertiesOf(belowState)).get(), 27);
                     world.setBlock(pos, newState, 27);
                 }

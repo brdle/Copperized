@@ -38,6 +38,7 @@ public class CopperMaps {
             .put(CopperizedBlocks.EXPOSED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get(), CopperizedBlocks.WAXED_EXPOSED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get())
             .put(CopperizedBlocks.WEATHERED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get(), CopperizedBlocks.WAXED_WEATHERED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get())
             .put(CopperizedBlocks.OXIDIZED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get(), CopperizedBlocks.WAXED_OXIDIZED_MEDIUM_WEIGHTED_PRESSURE_PLATE.get())
+            .put(CopperizedBlocks.COPPER_BUTTON.get(), CopperizedBlocks.WAXED_COPPER_BUTTON.get())
             .put(CopperizedBlocks.EXPOSED_COPPER_BUTTON.get(), CopperizedBlocks.WAXED_EXPOSED_COPPER_BUTTON.get())
             .put(CopperizedBlocks.WEATHERED_COPPER_BUTTON.get(), CopperizedBlocks.WAXED_WEATHERED_COPPER_BUTTON.get())
             .put(CopperizedBlocks.OXIDIZED_COPPER_BUTTON.get(), CopperizedBlocks.WAXED_OXIDIZED_COPPER_BUTTON.get())
