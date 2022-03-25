@@ -18,14 +18,11 @@ public class WaxedWeightedPressurePlateBlock extends WeightedPressurePlateBlock 
 
     @Override
     public BlockState getToolModifiedState(BlockState state, Level world, BlockPos pos, Player player, ItemStack stack, ToolAction toolAction) {
-        if (!stack.canPerformAction(toolAction) || !ToolActions.AXE_WAX_OFF.equals(toolAction)) {
-            return null;
-        }
-        var block = CopperMaps.getUnwaxed(state.getBlock());
-        if (block.isPresent() && state.getBlock() instanceof WaxedWeightedPressurePlateBlock) {
-            var newState = block.map(b -> b.withPropertiesOf(state)).get();
-            stack.shrink(1);
-            return newState;
+        if (stack.canPerformAction(toolAction) && ToolActions.AXE_WAX_OFF.equals(toolAction)) {
+            var block = CopperMaps.getUnwaxed(state.getBlock());
+            if (block.isPresent() && state.getBlock() instanceof WaxedWeightedPressurePlateBlock) {
+                return block.map(b -> b.withPropertiesOf(state)).get();
+            }
         }
         return null;
     }

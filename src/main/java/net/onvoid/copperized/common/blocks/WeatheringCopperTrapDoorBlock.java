@@ -61,7 +61,9 @@ public class WeatheringCopperTrapDoorBlock extends TrapDoorBlock implements Copp
             if (block.isPresent() && state.getBlock() instanceof WeatheringCopperTrapDoorBlock) {
                 world.setBlockAndUpdate(pos, block.map(b -> b.withPropertiesOf(state)).get());
                 world.levelEvent(player, 3003, pos, 0);
-                stack.shrink(1);
+                if (!world.isClientSide()) {
+                    stack.shrink(1);
+                }
                 return InteractionResult.SUCCESS;
             }
         }

@@ -25,6 +25,21 @@
     "copperized:waxed_exposed_medium_weighted_pressure_plate",
     "copperized:waxed_weathered_medium_weighted_pressure_plate",
     "copperized:waxed_oxidized_medium_weighted_pressure_plate",
-    "copperized:copper_bars"
+    "copperized:copper_button",
+    "copperized:exposed_copper_button",
+    "copperized:weathered_copper_button",
+    "copperized:oxidized_copper_button",
+    "copperized:waxed_copper_button",
+    "copperized:waxed_exposed_copper_button",
+    "copperized:waxed_weathered_copper_button",
+    "copperized:waxed_oxidized_copper_button",
+    "copperized:copper_bars",
+    "copperized:exposed_copper_bars",
+    "copperized:weathered_copper_bars",
+    "copperized:oxidized_copper_bars",
+    "copperized:waxed_copper_bars",
+    "copperized:waxed_exposed_copper_bars",
+    "copperized:waxed_weathered_copper_bars",
+    "copperized:waxed_oxidized_copper_bars"
   ]
 }

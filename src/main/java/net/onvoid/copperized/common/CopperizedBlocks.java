@@ -65,9 +65,6 @@ public class CopperizedBlocks {
     public static final RegistryObject<TrapDoorBlock> WAXED_OXIDIZED_COPPER_TRAPDOOR = BLOCKS.register("waxed_oxidized_copper_trapdoor", () ->
             new WaxedTrapDoorBlock(BlockBehaviour.Properties.copy(OXIDIZED_COPPER_TRAPDOOR.get())));
 
-    public static final RegistryObject<IronBarsBlock> COPPER_BARS = BLOCKS.register("copper_bars", () ->
-            new IronBarsBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(4.0F, 6.0F).sound(SoundType.METAL).noOcclusion()));
-
     public static final RegistryObject<WeightedPressurePlateBlock> MEDIUM_WEIGHTED_PRESSURE_PLATE = BLOCKS.register("medium_weighted_pressure_plate", () ->
             new WeatheringCopperWeightedPressurePlateBlock(WeatheringCopper.WeatherState.UNAFFECTED,
                     BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().noCollission().strength(0.5F).sound(SoundType.WOOD)));
@@ -109,6 +106,27 @@ public class CopperizedBlocks {
             new WaxedCopperButtonBlock(BlockBehaviour.Properties.copy(WEATHERED_COPPER_BUTTON.get())));
     public static final RegistryObject<WaxedCopperButtonBlock> WAXED_OXIDIZED_COPPER_BUTTON = BLOCKS.register("waxed_oxidized_copper_button", () ->
             new WaxedCopperButtonBlock(BlockBehaviour.Properties.copy(OXIDIZED_COPPER_BUTTON.get())));
+
+    public static final RegistryObject<CopperBarsBlock> COPPER_BARS = BLOCKS.register("copper_bars", () ->
+            new CopperBarsBlock(WeatheringCopper.WeatherState.UNAFFECTED,
+                    BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(4.0F, 6.0F).sound(SoundType.METAL).noOcclusion()));
+    public static final RegistryObject<CopperBarsBlock> EXPOSED_COPPER_BARS = BLOCKS.register("exposed_copper_bars", () ->
+            new CopperBarsBlock(WeatheringCopper.WeatherState.EXPOSED,
+                    BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(4.0F, 6.0F).sound(SoundType.METAL).noOcclusion()));
+    public static final RegistryObject<CopperBarsBlock> WEATHERED_COPPER_BARS = BLOCKS.register("weathered_copper_bars", () ->
+            new CopperBarsBlock(WeatheringCopper.WeatherState.WEATHERED,
+                    BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(4.0F, 6.0F).sound(SoundType.METAL).noOcclusion()));
+    public static final RegistryObject<CopperBarsBlock> OXIDIZED_COPPER_BARS = BLOCKS.register("oxidized_copper_bars", () ->
+            new CopperBarsBlock(WeatheringCopper.WeatherState.OXIDIZED,
+                    BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(4.0F, 6.0F).sound(SoundType.METAL).noOcclusion()));
+    public static final RegistryObject<WaxedCopperBarsBlock> WAXED_COPPER_BARS = BLOCKS.register("waxed_copper_bars", () ->
+            new WaxedCopperBarsBlock(BlockBehaviour.Properties.copy(COPPER_BARS.get())));
+    public static final RegistryObject<WaxedCopperBarsBlock> WAXED_EXPOSED_COPPER_BARS = BLOCKS.register("waxed_exposed_copper_bars", () ->
+            new WaxedCopperBarsBlock(BlockBehaviour.Properties.copy(EXPOSED_COPPER_BARS.get())));
+    public static final RegistryObject<WaxedCopperBarsBlock> WAXED_WEATHERED_COPPER_BARS = BLOCKS.register("waxed_weathered_copper_bars", () ->
+            new WaxedCopperBarsBlock(BlockBehaviour.Properties.copy(WEATHERED_COPPER_BARS.get())));
+    public static final RegistryObject<WaxedCopperBarsBlock> WAXED_OXIDIZED_COPPER_BARS = BLOCKS.register("waxed_oxidized_copper_bars", () ->
+            new WaxedCopperBarsBlock(BlockBehaviour.Properties.copy(OXIDIZED_COPPER_BARS.get())));
 
     public static void create(IEventBus bus) {
         BLOCKS.register(bus);

@@ -55,20 +55,18 @@ public class CopperButtonBlock extends StoneButtonBlock implements CopperizedWea
 
     @Override
     public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-        System.out.println("Use 0");
         var stack = player.getItemInHand(hand);
         if (stack.getItem() == Items.HONEYCOMB) {
-            System.out.println("Use 1");
             var block = CopperMaps.getWaxed(state.getBlock());
             if (block.isPresent() && state.getBlock() instanceof CopperButtonBlock) {
-                System.out.println("Use 2");
                 world.setBlockAndUpdate(pos, block.map(b -> b.withPropertiesOf(state)).get());
                 world.levelEvent(player, 3003, pos, 0);
-                stack.shrink(1);
+                if (!world.isClientSide()) {
+                    stack.shrink(1);
+                }
                 return InteractionResult.SUCCESS;
             }
         }
-        System.out.println("Use -1");
         return super.use(state, world, pos, player, hand, hitResult);
     }
 

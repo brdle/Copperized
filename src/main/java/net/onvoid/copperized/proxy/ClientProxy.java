@@ -41,5 +41,12 @@ public class ClientProxy extends CommonProxy {
         ItemBlockRenderTypes.setRenderLayer(CopperizedBlocks.WAXED_WEATHERED_COPPER_TRAPDOOR.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(CopperizedBlocks.WAXED_OXIDIZED_COPPER_TRAPDOOR.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(CopperizedBlocks.COPPER_BARS.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(CopperizedBlocks.EXPOSED_COPPER_BARS.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(CopperizedBlocks.WEATHERED_COPPER_BARS.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(CopperizedBlocks.OXIDIZED_COPPER_BARS.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(CopperizedBlocks.WAXED_COPPER_BARS.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(CopperizedBlocks.WAXED_EXPOSED_COPPER_BARS.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(CopperizedBlocks.WAXED_WEATHERED_COPPER_BARS.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(CopperizedBlocks.WAXED_OXIDIZED_COPPER_BARS.get(), RenderType.cutoutMipped());
     }
 }

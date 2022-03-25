@@ -8,23 +8,21 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.WeatheringCopper;
-import net.minecraft.world.level.block.WeightedPressurePlateBlock;
+import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.common.ToolAction;
 import net.minecraftforge.common.ToolActions;
 import net.onvoid.copperized.common.CopperMaps;
 import net.onvoid.copperized.common.CopperizedWeathering;
-
 import java.util.Optional;
 import java.util.Random;
 
-public class WeatheringCopperWeightedPressurePlateBlock extends WeightedPressurePlateBlock implements CopperizedWeathering {
-    private final WeatheringCopper.WeatherState weatherState;
+public class CopperBarsBlock extends IronBarsBlock implements CopperizedWeathering {
+    private final WeatherState weatherState;
 
-    public WeatheringCopperWeightedPressurePlateBlock(WeatheringCopper.WeatherState pWeatherState, Properties properties) {
-        super(60, properties);
+    public CopperBarsBlock(WeatherState pWeatherState, Properties properties) {
+        super(properties);
         this.weatherState = pWeatherState;
     }
 
@@ -48,7 +46,7 @@ public class WeatheringCopperWeightedPressurePlateBlock extends WeightedPressure
      * @return the weather state of this block.
      */
     @Override
-    public WeatheringCopper.WeatherState getAge() {
+    public WeatherState getAge() {
         return this.weatherState;
     }
 
@@ -57,7 +55,7 @@ public class WeatheringCopperWeightedPressurePlateBlock extends WeightedPressure
         var stack = player.getItemInHand(hand);
         if (stack.getItem() == Items.HONEYCOMB) {
             var block = CopperMaps.getWaxed(state.getBlock());
-            if (block.isPresent() && state.getBlock() instanceof WeatheringCopperWeightedPressurePlateBlock) {
+            if (block.isPresent() && state.getBlock() instanceof CopperBarsBlock) {
                 world.setBlockAndUpdate(pos, block.map(b -> b.withPropertiesOf(state)).get());
                 world.levelEvent(player, 3003, pos, 0);
                 if (!world.isClientSide()) {
@@ -73,7 +71,7 @@ public class WeatheringCopperWeightedPressurePlateBlock extends WeightedPressure
     public BlockState getToolModifiedState(BlockState state, Level world, BlockPos pos, Player player, ItemStack stack, ToolAction toolAction) {
         if (stack.canPerformAction(toolAction) && ToolActions.AXE_SCRAPE.equals(toolAction)) {
             var block = CopperMaps.getPrevious(state.getBlock());
-            if (block.isPresent() && state.getBlock() instanceof WeatheringCopperWeightedPressurePlateBlock) {
+            if (block.isPresent() && state.getBlock() instanceof CopperBarsBlock) {
                 return block.map(b -> b.withPropertiesOf(state)).get();
             }
         }

@@ -115,6 +115,20 @@ public class CopperizedItems {
 
     public static final RegistryObject<BlockItem> COPPER_BARS = ITEMS.register("copper_bars", () ->
             new BlockItem(CopperizedBlocks.COPPER_BARS.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<BlockItem> EXPOSED_COPPER_BARS = ITEMS.register("exposed_copper_bars", () ->
+            new BlockItem(CopperizedBlocks.EXPOSED_COPPER_BARS.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<BlockItem> WEATHERED_COPPER_BARS = ITEMS.register("weathered_copper_bars", () ->
+            new BlockItem(CopperizedBlocks.WEATHERED_COPPER_BARS.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<BlockItem> OXIDIZED_COPPER_BARS = ITEMS.register("oxidized_copper_bars", () ->
+            new BlockItem(CopperizedBlocks.OXIDIZED_COPPER_BARS.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<BlockItem> WAXED_COPPER_BARS = ITEMS.register("waxed_copper_bars", () ->
+            new BlockItem(CopperizedBlocks.WAXED_COPPER_BARS.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<BlockItem> WAXED_EXPOSED_COPPER_BARS = ITEMS.register("waxed_exposed_copper_bars", () ->
+            new BlockItem(CopperizedBlocks.WAXED_EXPOSED_COPPER_BARS.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<BlockItem> WAXED_WEATHERED_COPPER_BARS = ITEMS.register("waxed_weathered_copper_bars", () ->
+            new BlockItem(CopperizedBlocks.WAXED_WEATHERED_COPPER_BARS.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<BlockItem> WAXED_OXIDIZED_COPPER_BARS = ITEMS.register("waxed_oxidized_copper_bars", () ->
+            new BlockItem(CopperizedBlocks.WAXED_OXIDIZED_COPPER_BARS.get(), (new Item.Properties()).tab(CreativeModeTab.TAB_DECORATIONS)));
 
     public static void create(IEventBus bus) {
         ITEMS.register(bus);

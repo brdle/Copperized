@@ -10,7 +10,6 @@
   "item.copperized.copper_hoe": "Copper Hoe",
   "item.copperized.copper_shovel": "Copper Shovel",
   "item.copperized.copper_horse_armor": "Copper Horse Armor",
-  "block.copperized.copper_bars": "Copper Bars",
   "block.copperized.copper_door": "Copper Door",
   "block.copperized.exposed_copper_door": "Exposed Copper Door",
   "block.copperized.weathered_copper_door": "Weathered Copper Door",
@@ -42,5 +41,13 @@
   "block.copperized.waxed_copper_button": "Waxed Copper Button",
   "block.copperized.waxed_exposed_copper_button": "Waxed Exposed Copper Button",
   "block.copperized.waxed_weathered_copper_button": "Waxed Weathered Copper Button",
-  "block.copperized.waxed_oxidized_copper_button": "Waxed Oxidized Copper Button"
+  "block.copperized.waxed_oxidized_copper_button": "Waxed Oxidized Copper Button",
+  "block.copperized.copper_bars": "Copper Bars",
+  "block.copperized.exposed_copper_bars": "Exposed Copper Bars",
+  "block.copperized.weathered_copper_bars": "Weathered Copper Bars",
+  "block.copperized.oxidized_copper_bars": "Oxidized Copper Bars",
+  "block.copperized.waxed_copper_bars": "Waxed Copper Bars",
+  "block.copperized.waxed_exposed_copper_bars": "Waxed Exposed Copper Bars",
+  "block.copperized.waxed_weathered_copper_bars": "Waxed Weathered Copper Bars",
+  "block.copperized.waxed_oxidized_copper_bars": "Waxed Oxidized Copper Bars"
 }
