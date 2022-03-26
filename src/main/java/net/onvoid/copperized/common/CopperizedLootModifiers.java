@@ -10,7 +10,7 @@ import net.onvoid.copperized.Copperized;
 
 public class CopperizedLootModifiers {
 
-    private static final DeferredRegister<GlobalLootModifierSerializer<?>> LOOT_MODIFIERS = DeferredRegister.create(ForgeRegistries.Keys.LOOT_MODIFIER_SERIALIZERS, Copperized.MODID);
+    private static final DeferredRegister<GlobalLootModifierSerializer<?>> LOOT_MODIFIERS = DeferredRegister.create(ForgeRegistries.LOOT_MODIFIER_SERIALIZERS, Copperized.MODID);
 
     public static final RegistryObject<ChanceItemLootModifier.Serializer> CHANCE_ITEM = LOOT_MODIFIERS.register("chance_item",
             ChanceItemLootModifier.Serializer::new);
