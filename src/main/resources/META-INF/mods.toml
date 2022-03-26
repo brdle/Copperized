@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[39,)"
+loaderVersion="[37,)"
 license="MIT License"
 issueTrackerURL="https://github.com/onVoid/Copperized/issues"
 
@@ -21,6 +21,6 @@ configBackground="minecraft:textures/block/cut_copper.png"
 [[dependencies.copperized]]
     modId="forge"
     mandatory=true
-    versionRange="[39,)"
+    versionRange="[37,)"
     ordering="NONE"
     side="BOTH"
