@@ -49,5 +49,8 @@
   "block.copperized.waxed_copper_bars": "Waxed Copper Bars",
   "block.copperized.waxed_exposed_copper_bars": "Waxed Exposed Copper Bars",
   "block.copperized.waxed_weathered_copper_bars": "Waxed Weathered Copper Bars",
-  "block.copperized.waxed_oxidized_copper_bars": "Waxed Oxidized Copper Bars"
+  "block.copperized.waxed_oxidized_copper_bars": "Waxed Oxidized Copper Bars",
+  "jei.copperized.waxing": "Waxing",
+  "jei.copperized.oxidation": "Oxidation",
+  "jei.copperized.axe_scraping": "Axe Scraping"
 }
