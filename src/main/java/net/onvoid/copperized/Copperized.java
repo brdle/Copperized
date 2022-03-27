@@ -16,12 +16,11 @@ public class Copperized {
 
     public Copperized() {
         instance = this;
-
         proxy = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> CommonProxy::new);
         proxy.start();
     }
 
     public Logger getLogger() {
-        return this.LOGGER;
+        return LOGGER;
     }
 }
