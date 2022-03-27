@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "copperized:exposed_medium_weighted_pressure_plate"
+    },
+    {
+      "item": "minecraft:honeycomb"
+    }
+  ],
+  "result": {
+    "item": "copperized:waxed_exposed_medium_weighted_pressure_plate"
+  }
+}
