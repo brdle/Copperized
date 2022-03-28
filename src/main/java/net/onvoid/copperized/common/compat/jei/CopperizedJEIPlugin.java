@@ -11,8 +11,11 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.WeatheringCopper;
+import net.minecraftforge.fml.ModList;
 import net.onvoid.copperized.Copperized;
 import net.onvoid.copperized.common.CopperMaps;
+import net.onvoid.copperized.common.compat.patinapipeworks.PatinaPipeworksMaps;
+import net.onvoid.copperized.common.compat.quark.QuarkMaps;
 import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 
@@ -46,6 +49,16 @@ public class CopperizedJEIPlugin implements IModPlugin {
                 oxidationRecipes.add(new OxidationRecipe(new ItemStack(blockFrom), new ItemStack(blockTo))));
         CopperMaps.NEXT_BY_BLOCK.get().forEach((Block blockFrom, Block blockTo) ->
                 oxidationRecipes.add(new OxidationRecipe(new ItemStack(blockFrom), new ItemStack(blockTo))));
+            // Patina Pipeworks Compat
+        if (ModList.get().isLoaded("patinapipeworks")) {
+            PatinaPipeworksMaps.NEXT_BY_BLOCK.get().forEach((Block blockFrom, Block blockTo) ->
+                    oxidationRecipes.add(new OxidationRecipe(new ItemStack(blockFrom), new ItemStack(blockTo))));
+        }
+            // Quark Compat
+        if (ModList.get().isLoaded("quark")) {
+            QuarkMaps.NEXT_BY_BLOCK.get().forEach((Block blockFrom, Block blockTo) ->
+                    oxidationRecipes.add(new OxidationRecipe(new ItemStack(blockFrom), new ItemStack(blockTo))));
+        }
         registration.addRecipes(oxidationRecipes, OxidationRecipeCategory.UID);
 
         // Waxing
@@ -53,6 +66,16 @@ public class CopperizedJEIPlugin implements IModPlugin {
                 waxingRecipes.add(new WaxingRecipe(new ItemStack(blockFrom), new ItemStack(blockTo))));
         CopperMaps.WAXABLES.get().forEach((Block blockFrom, Block blockTo) ->
                 waxingRecipes.add(new WaxingRecipe(new ItemStack(blockFrom), new ItemStack(blockTo))));
+            // Patina Pipeworks Compat
+        if (ModList.get().isLoaded("patinapipeworks")) {
+            PatinaPipeworksMaps.WAXABLES.get().forEach((Block blockFrom, Block blockTo) ->
+                    waxingRecipes.add(new WaxingRecipe(new ItemStack(blockFrom), new ItemStack(blockTo))));
+        }
+            // Quark Compat
+        if (ModList.get().isLoaded("quark")) {
+            QuarkMaps.WAXABLES.get().forEach((Block blockFrom, Block blockTo) ->
+                    waxingRecipes.add(new WaxingRecipe(new ItemStack(blockFrom), new ItemStack(blockTo))));
+        }
         registration.addRecipes(waxingRecipes, WaxingRecipeCategory.UID);
 
         // Axe Scraping
@@ -64,6 +87,20 @@ public class CopperizedJEIPlugin implements IModPlugin {
                 axeScrapingRecipes.add(new AxeScrapingRecipe(new ItemStack(blockFrom), new ItemStack(blockTo))));
         CopperMaps.PREVIOUS_BY_BLOCK.get().forEach((Block blockFrom, Block blockTo) ->
                 axeScrapingRecipes.add(new AxeScrapingRecipe(new ItemStack(blockFrom), new ItemStack(blockTo))));
+            // Patina Pipeworks Compat
+        if (ModList.get().isLoaded("patinapipeworks")) {
+            PatinaPipeworksMaps.PREVIOUS_BY_BLOCK.get().forEach((Block blockFrom, Block blockTo) ->
+                    axeScrapingRecipes.add(new AxeScrapingRecipe(new ItemStack(blockFrom), new ItemStack(blockTo))));
+            PatinaPipeworksMaps.WAX_OFF_BY_BLOCK.get().forEach((Block blockFrom, Block blockTo) ->
+                    axeScrapingRecipes.add(new AxeScrapingRecipe(new ItemStack(blockFrom), new ItemStack(blockTo))));
+        }
+            // Quark Compat
+        if (ModList.get().isLoaded("quark")) {
+            QuarkMaps.PREVIOUS_BY_BLOCK.get().forEach((Block blockFrom, Block blockTo) ->
+                    axeScrapingRecipes.add(new AxeScrapingRecipe(new ItemStack(blockFrom), new ItemStack(blockTo))));
+            QuarkMaps.WAX_OFF_BY_BLOCK.get().forEach((Block blockFrom, Block blockTo) ->
+                    axeScrapingRecipes.add(new AxeScrapingRecipe(new ItemStack(blockFrom), new ItemStack(blockTo))));
+        }
         registration.addRecipes(axeScrapingRecipes, AxeScrapingRecipeCategory.UID);
     }
 

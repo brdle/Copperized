@@ -33,6 +33,8 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
             mods {
                 copperized {
@@ -45,6 +47,8 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
             mods {
                 copperized {
@@ -88,6 +92,9 @@ dependencies {
 
     compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
+    implementation fg.deobf("curse.maven:patina-pipeworks-565266:${patina_pipeworks_version}")
+    implementation fg.deobf("curse.maven:autoreglib-250363:${arl_version}")
+    implementation fg.deobf("curse.maven:quark-243121:${quark_version}")
 }
 
 jar {

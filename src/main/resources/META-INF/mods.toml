@@ -24,3 +24,24 @@ configBackground="minecraft:textures/block/cut_copper.png"
     versionRange="[39,)"
     ordering="NONE"
     side="BOTH"
+
+[[dependencies.copperized]]
+    modId="jei"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="BEFORE"
+    side="BOTH"
+
+[[dependencies.copperized]]
+    modId="patinapipeworks"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="BEFORE"
+    side="BOTH"
+
+[[dependencies.copperized]]
+    modId="quark"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="BEFORE"
+    side="BOTH"
