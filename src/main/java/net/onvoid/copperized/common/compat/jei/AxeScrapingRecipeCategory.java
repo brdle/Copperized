@@ -8,20 +8,14 @@ import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
-import mezz.jei.api.recipe.vanilla.IJeiBrewingRecipe;
 import net.minecraft.core.Registry;
-import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
-import net.minecraft.tags.TagManager;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.onvoid.copperized.Copperized;
 import net.onvoid.copperized.common.CopperizedItems;
-import org.checkerframework.checker.guieffect.qual.UI;
 import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nonnull;
 import java.util.Objects;
@@ -58,7 +52,7 @@ public class AxeScrapingRecipeCategory implements IRecipeCategory<AxeScrapingRec
 
     @Override
     public @NotNull Component getTitle() {
-        return new TranslatableComponent("jei." + Copperized.MODID + ".axe_scraping");
+        return Component.translatable("jei." + Copperized.MODID + ".axe_scraping");
     }
 
     @Override

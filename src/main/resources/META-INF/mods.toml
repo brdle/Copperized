@@ -1,7 +1,7 @@
 modLoader="javafml"
-loaderVersion="[39,)"
+loaderVersion="[41,)"
 license="MIT License"
-issueTrackerURL="https://github.com/onVoid/Copperized/issues"
+issueTrackerURL="https://github.com/brdle/Copperized/issues"
 
 
 [[mods]]
@@ -13,7 +13,7 @@ updateJSONURL="https://onvoid.net/copperized/update.json"
 logoFile="copperized.png"
 logoBlur=false
 credits=""
-authors="onVoid"
+authors="brdle"
 description="Completes copper as a worthy metal—with a full set of tools, armor, doors, and a nugget."
 itemIcon="copperized:copper_nugget"
 configBackground="minecraft:textures/block/cut_copper.png"
@@ -21,6 +21,6 @@ configBackground="minecraft:textures/block/cut_copper.png"
 [[dependencies.copperized]]
     modId="forge"
     mandatory=true
-    versionRange="[39,)"
+    versionRange="[41,)"
     ordering="NONE"
     side="BOTH"

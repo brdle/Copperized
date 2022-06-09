@@ -9,7 +9,6 @@ import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.helpers.IGuiHelper;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -49,7 +48,7 @@ public class WaxingRecipeCategory implements IRecipeCategory<WaxingRecipe> {
     @Override
     @Deprecated
     public @NotNull Component getTitle() {
-        return new TranslatableComponent("jei." + Copperized.MODID + ".waxing");
+        return Component.translatable("jei." + Copperized.MODID + ".waxing");
     }
 
     @Override

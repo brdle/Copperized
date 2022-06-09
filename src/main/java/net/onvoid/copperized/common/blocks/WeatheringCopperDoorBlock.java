@@ -4,10 +4,12 @@ import java.util.Optional;
 import java.util.Random;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.ChangeOverTimeBlock;
 import net.minecraft.world.level.block.DoorBlock;
@@ -33,7 +35,7 @@ public class WeatheringCopperDoorBlock extends DoorBlock implements CopperizedWe
      * Performs a random tick on a block.
      */
     @Override
-    public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, Random pRandom) {
+    public void onRandomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
         this.onRandomTick(pState, pLevel, pPos, pRandom);
     }
 
@@ -95,10 +97,13 @@ public class WeatheringCopperDoorBlock extends DoorBlock implements CopperizedWe
     }
 
     @Override
-    public BlockState getToolModifiedState(BlockState state, Level world, BlockPos pos, Player player, ItemStack stack, ToolAction toolAction) {
-        if (stack.canPerformAction(toolAction) && ToolActions.AXE_SCRAPE.equals(toolAction)) {
+    public BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate) {
+        if (context.getItemInHand().canPerformAction(toolAction) && ToolActions.AXE_SCRAPE.equals(toolAction)) {
             var block = CopperMaps.getPrevious(state.getBlock());
             if (block.isPresent() && state.getBlock() instanceof WeatheringCopperDoorBlock) {
+                var world = context.getLevel();
+                var player = context.getPlayer();
+                var pos = context.getClickedPos();
                 var below = pos.below();
                 var above = pos.above();
                 var belowState = world.getBlockState(below);
@@ -120,7 +125,7 @@ public class WeatheringCopperDoorBlock extends DoorBlock implements CopperizedWe
     }
 
     @Override
-    public void applyChangeOverTime(BlockState state, ServerLevel world, BlockPos pos, Random pRandom) {
+    public void applyChangeOverTime(BlockState state, ServerLevel world, BlockPos pos, RandomSource pRandom) {
         int i = this.getAge().ordinal();
         int j = 0;
         int k = 0;
