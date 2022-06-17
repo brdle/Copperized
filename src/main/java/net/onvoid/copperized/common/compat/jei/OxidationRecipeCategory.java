@@ -25,24 +25,12 @@ public class OxidationRecipeCategory implements IRecipeCategory<OxidationRecipe>
 
     public OxidationRecipeCategory(IGuiHelper guiHelper){
         this.background = guiHelper.createDrawable(CopperizedJEIPlugin.GUI_TEXTURE, 0, 0, 70, 18);
-        this.icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM, new ItemStack(Items.RAW_COPPER));
+        this.icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(Items.RAW_COPPER));
     }
 
     @Override
     public @NotNull RecipeType<OxidationRecipe> getRecipeType() {
         return CopperizedJEIPlugin.OXIDATION;
-    }
-
-    @SuppressWarnings("removal")
-    @Override
-    public @NotNull ResourceLocation getUid() {
-        return getRecipeType().getUid();
-    }
-
-    @SuppressWarnings("removal")
-    @Override
-    public @NotNull Class<? extends OxidationRecipe> getRecipeClass() {
-        return getRecipeType().getRecipeClass();
     }
 
     @Override

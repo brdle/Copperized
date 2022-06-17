@@ -30,24 +30,12 @@ public class AxeScrapingRecipeCategory implements IRecipeCategory<AxeScrapingRec
 
     public AxeScrapingRecipeCategory(IGuiHelper guiHelper){
         this.background = guiHelper.createDrawable(CopperizedJEIPlugin.GUI_TEXTURE, 0, 36, 70, 18);
-        this.icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM, new ItemStack(CopperizedItems.COPPER_AXE.get()));
+        this.icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(CopperizedItems.COPPER_AXE.get()));
     }
 
     @Override
     public @NotNull RecipeType<AxeScrapingRecipe> getRecipeType() {
         return CopperizedJEIPlugin.AXE_SCRAPING;
-    }
-
-    @SuppressWarnings("removal")
-    @Override
-    public @NotNull ResourceLocation getUid() {
-        return getRecipeType().getUid();
-    }
-
-    @SuppressWarnings("removal")
-    @Override
-    public @NotNull Class<? extends AxeScrapingRecipe> getRecipeClass() {
-        return getRecipeType().getRecipeClass();
     }
 
     @Override

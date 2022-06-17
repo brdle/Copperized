@@ -25,24 +25,12 @@ public class WaxingRecipeCategory implements IRecipeCategory<WaxingRecipe> {
 
     public WaxingRecipeCategory(IGuiHelper guiHelper){
         this.background = guiHelper.createDrawable(CopperizedJEIPlugin.GUI_TEXTURE, 0, 18, 70, 18);
-        this.icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM, new ItemStack(Items.HONEYCOMB));
+        this.icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(Items.HONEYCOMB));
     }
 
     @Override
     public @NotNull RecipeType<WaxingRecipe> getRecipeType() {
         return CopperizedJEIPlugin.WAXING;
-    }
-
-    @SuppressWarnings("removal")
-    @Override
-    public @NotNull ResourceLocation getUid() {
-        return getRecipeType().getUid();
-    }
-
-    @SuppressWarnings("removal")
-    @Override
-    public @NotNull Class<? extends WaxingRecipe> getRecipeClass() {
-        return getRecipeType().getRecipeClass();
     }
 
     @Override
